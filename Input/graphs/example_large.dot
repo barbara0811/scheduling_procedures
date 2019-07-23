@@ -1,0 +1,65 @@
+digraph BST {
+	"GRUPA_ZADATAKA" [label="GRUPA_ZADATAKA\nag"]
+	"GRUPA_ZADATAKA" -> "ZADATAK1" [label="q_sum"];
+	"GRUPA_ZADATAKA" -> "ZADATAK2";
+	"ZADATAK1" [label="ZADATAK1\nag"]
+	"ZADATAK1" -> "ZADATAK11" [label="q_min"];
+	"ZADATAK1" -> "ZADATAK12";
+	"ZADATAK11" [label="ZADATAK11\nag"]
+	"ZADATAK11" -> "ZADATAK111" [label="q_min"];
+	"ZADATAK11" -> "ZADATAK112";
+	"ZADATAK111" [label="ZADATAK111\nag"]
+	"ZADATAK111" -> "AA1" [label="q_sum"];
+	"ZADATAK111" -> "AA2";
+	"AA1" [label="AA1\nag",shape=box]
+	"AA2" [label="AA2\nag",shape=box]
+	"ZADATAK112" [label="ZADATAK112\nag"]
+	"ZADATAK112" -> "AA3" [label="q_sum"];
+	"ZADATAK112" -> "AA4";
+	"AA3" [label="AA3\nag",shape=box]
+	"AA4" [label="AA4\nag",shape=box]
+	"ZADATAK12" [label="ZADATAK12\nag"]
+	"ZADATAK12" -> "ZADATAK121" [label="q_min"];
+	"ZADATAK12" -> "ZADATAK122";
+	"ZADATAK121" [label="ZADATAK121\nag"]
+	"ZADATAK121" -> "AB1" [label="q_max"];
+	"ZADATAK121" -> "AB2";
+	"AB1" [label="AB1\nag",shape=box]
+	"AB2" [label="AB2\nag",shape=box]
+	"ZADATAK122" [label="ZADATAK122\nag"]
+	"ZADATAK122" -> "AB3";
+	"ZADATAK122" -> "AB4" [label="q_sum"];
+	"ZADATAK122" -> "AB5";
+	"AB3" [label="AB3\nag",shape=box]
+	"AB4" [label="AB4\nag",shape=box]
+	"AB5" [label="AB5\nag",shape=box]
+	"ZADATAK2" [label="ZADATAK2\nag"]
+	"ZADATAK2" -> "ZADATAK21" [label="q_sum"];
+	"ZADATAK2" -> "ZADATAK22";
+	"ZADATAK21" [label="ZADATAK21\nag"]
+	"ZADATAK21" -> "ZADATAK211" [label="q_max"];
+	"ZADATAK21" -> "ZADATAK212";
+	"ZADATAK211" [label="ZADATAK211\nag"]
+	"ZADATAK211" -> "BA1" [label="q_min"];
+	"ZADATAK211" -> "BA2";
+	"BA1" [label="BA1\nag",shape=box]
+	"BA2" [label="BA2\nag",shape=box]
+	"ZADATAK212" [label="ZADATAK212\nag"]
+	"ZADATAK212" -> "BA3" [label="q_sum"];
+	"ZADATAK212" -> "BA4";
+	"BA3" [label="BA3\nag",shape=box]
+	"BA4" [label="BA4\nag",shape=box]
+	"ZADATAK22" [label="ZADATAK22\nag"]
+	"ZADATAK22" -> "ZADATAK221" [label="q_min"];
+	"ZADATAK22" -> "ZADATAK222";
+	"ZADATAK221" [label="ZADATAK221\nag"]
+	"ZADATAK221" -> "BB1" [label="q_sum"];
+	"ZADATAK221" -> "BB2";
+	"BB1" [label="BB1\nag",shape=box]
+	"BB2" [label="BB2\nag",shape=box]
+	"ZADATAK222" [label="ZADATAK222\nag"]
+	"ZADATAK222" -> "BB3" [label="q_sum"];
+	"ZADATAK222" -> "BB4";
+	"BB3" [label="BB3\nag",shape=box]
+	"BB4" [label="BB4\nag",shape=box]
+}

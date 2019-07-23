@@ -1,0 +1,322 @@
+(spec_task_group
+	(label GRUPA_ZADATAKA)
+	(agent ag)
+	(subtasks ZADATAK1, ZADATAK2)
+	(qaf q_sum)
+        (type homogeneous)
+)
+
+(spec_task_group
+	(label ZADATAK1)
+	(agent ag)
+	(supertasks GRUPA_ZADATAKA)
+	(subtasks ZADATAK11, ZADATAK12)
+	(qaf q_min)
+)
+
+(spec_task_group
+	(label ZADATAK2)
+	(agent ag)
+	(supertasks GRUPA_ZADATAKA)
+	(subtasks ZADATAK21, ZADATAK22)
+	(qaf q_sum)
+)
+
+(spec_task_group
+	(label ZADATAK11)
+	(agent ag)
+	(supertasks ZADATAK1)
+	(subtasks ZADATAK111, ZADATAK112)
+	(qaf q_min)
+)
+
+(spec_task_group
+	(label ZADATAK12)
+	(agent ag)
+	(supertasks ZADATAK1)
+	(subtasks ZADATAK121, ZADATAK122)
+	(qaf q_min)
+)
+
+(spec_task_group
+	(label ZADATAK21)
+	(agent ag)
+	(supertasks ZADATAK2)
+	(subtasks ZADATAK211, ZADATAK212)
+	(qaf q_max)
+)
+
+(spec_task_group
+	(label ZADATAK22)
+	(agent ag)
+	(supertasks ZADATAK2)
+	(subtasks ZADATAK221, ZADATAK222)
+	(qaf q_min)
+)
+
+(spec_task_group
+	(label ZADATAK111)
+	(agent ag)
+	(supertasks ZADATAK11)
+	(subtasks AA1, AA2)
+	(qaf q_sum)
+)
+
+(spec_task_group
+	(label ZADATAK112)
+	(agent ag)
+	(supertasks ZADATAK11)
+	(subtasks AA3, AA4)
+	(qaf q_min)
+)
+
+(spec_task_group
+	(label ZADATAK121)
+	(agent ag)
+	(supertasks ZADATAK12)
+	(subtasks AB1, AB2)
+	(qaf q_max)
+)
+
+(spec_task_group
+	(label ZADATAK122)
+	(agent ag)
+	(supertasks ZADATAK12)
+	(subtasks AB3, AB4, AB5)
+	(qaf q_sum)
+)
+
+(spec_task_group
+	(label ZADATAK211)
+	(agent ag)
+	(supertasks ZADATAK21)
+	(subtasks BA1, BA2)
+	(qaf q_min)
+)
+
+(spec_task_group
+	(label ZADATAK212)
+	(agent ag)
+	(supertasks ZADATAK21)
+	(subtasks BA3, BA4)
+	(qaf q_sum)
+)
+
+(spec_task_group
+	(label ZADATAK221)
+	(agent ag)
+	(supertasks ZADATAK22)
+	(subtasks BB1, BB2)
+	(qaf q_sum_all)
+)
+
+(spec_task_group
+	(label ZADATAK222)
+	(agent ag)
+	(supertasks ZADATAK22)
+	(subtasks BB3, BB4)
+	(qaf q_sum)
+)
+
+(spec_method
+   (label AA1)
+   (agent ag)
+   (supertasks ZADATAK111)
+   (outcome
+         (quality_distribution 20 1.0)
+         (cost_distribution 25 1.0)
+		 (duration_distribution 105 1.0)
+   )
+)
+
+(spec_method
+   (label AA2)
+   (agent ag)
+   (supertasks ZADATAK111)
+   (outcome
+         (quality_distribution 5 1.0)
+         (cost_distribution 27 1.0)
+		 (duration_distribution 15 1.0)
+   )
+)
+
+(spec_method
+   (label AA3)
+   (agent ag)
+   (supertasks ZADATAK112)
+   (outcome
+         (quality_distribution 45 1.0)
+         (cost_distribution 3 1.0)
+		 (duration_distribution 110 1.0)
+   )
+)
+
+(spec_method
+   (label AA4)
+   (agent ag)
+   (supertasks ZADATAK112)
+   (outcome
+         (quality_distribution 26 1.0)
+         (cost_distribution 5 1.0)
+		 (duration_distribution 55 1.0)
+   )
+)
+
+(spec_method
+   (label AB1)
+   (agent ag)
+   (supertasks ZADATAK121)
+   (outcome
+         (quality_distribution 4 1.0)
+         (cost_distribution 30 1.0)
+		 (duration_distribution 10 1.0)
+   )
+)
+
+(spec_method
+   (label AB2)
+   (agent ag)
+   (supertasks ZADATAK121)
+   (outcome
+         (quality_distribution 60 1.0)
+         (cost_distribution 2 1.0)
+		 (duration_distribution 130 1.0)
+   )
+)
+
+(spec_method
+   (label AB3)
+   (agent ag)
+   (supertasks ZADATAK122)
+   (outcome
+         (quality_distribution 30 1.0)
+         (cost_distribution 3 1.0)
+		 (duration_distribution 58 1.0)
+   )
+)
+
+(spec_method
+   (label AB4)
+   (agent ag)
+   (supertasks ZADATAK122)
+   (outcome
+         (quality_distribution 10 1.0)
+         (cost_distribution 30 1.0)
+		 (duration_distribution 0 1.0)
+   )
+)
+
+(spec_method
+   (label AB5)
+   (agent ag)
+   (supertasks ZADATAK122)
+   (outcome
+         (quality_distribution 80 1.0)
+         (cost_distribution 1 1.0)
+		 (duration_distribution 150 1.0)
+   )
+)
+
+(spec_method
+   (label BA1)
+   (agent ag)
+   (supertasks ZADATAK211)
+   (outcome
+         (quality_distribution 33 1.0)
+         (cost_distribution 40 1.0)
+		 (duration_distribution 70 1.0)
+   )
+)
+
+(spec_method
+   (label BA2)
+   (agent ag)
+   (supertasks ZADATAK211)
+   (outcome
+         (quality_distribution 6 1.0)
+         (cost_distribution 35 1.0)
+		 (duration_distribution 17 1.0)
+   )
+)
+
+(spec_method
+   (label BA3)
+   (agent ag)
+   (supertasks ZADATAK212)
+   (outcome
+         (quality_distribution 90 1.0)
+         (cost_distribution 5 1.0)
+		 (duration_distribution 130 1.0)
+   )
+)
+
+(spec_method
+   (label BA4)
+   (agent ag)
+   (supertasks ZADATAK212)
+   (outcome
+         (quality_distribution 28 1.0)
+         (cost_distribution 4 1.0)
+		 (duration_distribution 73 1.0)
+   )
+)
+
+(spec_method
+   (label BB1)
+   (agent ag)
+   (supertasks ZADATAK221)
+   (outcome
+         (quality_distribution 7 1.0)
+         (cost_distribution 30 1.0)
+		 (duration_distribution 17 1.0)
+   )
+)
+
+(spec_method
+   (label BB2)
+   (agent ag)
+   (supertasks ZADATAK221)
+   (outcome
+         (quality_distribution 51 1.0)
+         (cost_distribution 2 1.0)
+		 (duration_distribution 117 1.0)
+   )
+)
+
+(spec_method
+   (label BB3)
+   (agent ag)
+   (supertasks ZADATAK222)
+   (outcome
+         (quality_distribution 21 1.0)
+         (cost_distribution 32 1.0)
+		 (duration_distribution 64 1.0)
+   )
+)
+
+(spec_method
+   (label BB4)
+   (agent ag)
+   (supertasks ZADATAK222)
+   (outcome
+         (quality_distribution 7 1.0)
+         (cost_distribution 36 1.0)
+		 (duration_distribution 5 1.0)
+   )
+)
+
+(spec_enables
+	(label E1)
+	(agent ag)
+	(from ZADATAK112)
+	(to ZADATAK122)
+	(delay 0)
+)
+
+(spec_enables
+	(label E2)
+	(agent ag)
+	(from BB1)
+	(to BB2)
+	(delay 0)
+)
